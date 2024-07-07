@@ -2,29 +2,28 @@
 
 int count_equal_divisors(int n) {
     int count = 0;
-
+    
     for (int m = 1; m < n; m++) {
         if (n / m == n % m) {
             count++;
         }
     }
-
+    
     return count;
 }
 
 int main() {
     int n;
-    printf("Введіть натуральне число n: ");
+    printf("Р’РІРµРґС–С‚СЊ РЅР°С‚СѓСЂР°Р»СЊРЅРµ С‡РёСЃР»Рѕ n: ");
     scanf("%d", &n);
-
+    
     if (n <= 1 || n >= 150) {
-        printf("Значення n повинно бути від 2 до 149.\n");
+        printf("Р—РЅР°С‡РµРЅРЅСЏ n РїРѕРІРёРЅРЅРѕ Р±СѓС‚Рё РІС–Рґ 2 РґРѕ 149.\n");
         return 1;
     }
-
+    
     int result = count_equal_divisors(n);
-    printf("Кількість рівних дільників числа %d: %d\n", n, result);
-
+    printf("РљС–Р»СЊРєС–СЃС‚СЊ СЂС–РІРЅРёС… РґС–Р»СЊРЅРёРєС–РІ С‡РёСЃР»Р° %d: %d\n", n, result);
+    
     return 0;
 }
-
